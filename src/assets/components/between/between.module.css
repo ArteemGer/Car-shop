@@ -1,0 +1,14 @@
+.between{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+.between hr{
+    width: 200px;
+    height: 1px;
+}
+.betweenText{
+    font-size: 30px;
+}

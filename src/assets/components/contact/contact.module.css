@@ -1,0 +1,11 @@
+.contactItem{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.contactTitle{
+    padding-left: 40px;
+}

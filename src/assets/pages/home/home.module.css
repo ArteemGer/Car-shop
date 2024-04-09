@@ -1,0 +1,30 @@
+.mainContainer{
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+}
+.App{
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.welcome{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+}
+.reviews{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+.cards{
+    display: flex;
+    width: 1200px;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}

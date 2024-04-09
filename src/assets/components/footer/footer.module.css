@@ -1,0 +1,12 @@
+.footer{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+.footerContainer{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+}

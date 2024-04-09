@@ -1,0 +1,23 @@
+.review{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    border-radius: 8px;
+
+}
+.profileImage{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+.reviewInfo{
+    margin-left: 20px;
+}
+.reviewInfo p{
+    color: gray;
+    margin-top: 5px;
+}
+.stars{
+    margin-top: 20px;
+}

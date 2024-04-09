@@ -1,0 +1,15 @@
+.nav{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navItem{
+    font-size: 20px;
+}
+.navLink{
+    transition: color 0.4s;
+}
+.navLink:hover{
+    color: deepskyblue;
+}

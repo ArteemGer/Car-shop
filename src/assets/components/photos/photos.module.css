@@ -1,0 +1,8 @@
+.flowers{
+    width: 616px;
+    gap: 20px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
