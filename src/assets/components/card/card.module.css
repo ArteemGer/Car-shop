@@ -3,6 +3,9 @@
     padding: 30px;
     border-radius: 8px;
 }
+.card h2{
+    margin-top: 10px;
+}
 .price{
     display: flex;
     justify-content: space-between;

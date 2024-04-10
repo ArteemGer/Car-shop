@@ -4,7 +4,9 @@ import { Home } from './assets/pages/home/home';
 import { Shop } from './assets/pages/shop/shop';
 import './App.css'
 
+
 function App() {
+
   const router = createBrowserRouter([
     {
       path:'/',
