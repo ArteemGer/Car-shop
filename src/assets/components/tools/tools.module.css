@@ -1,0 +1,50 @@
+.tools{
+    padding: 30px;
+    margin-top: 50px;
+    width: 1200px;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 132px;
+}
+.sorting{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.radioButtons{
+    margin-left: 10px;
+}
+.radioInput{
+    display: flex;
+    gap: 5px;
+}
+.no-vis{
+    display: none;
+}
+.inputSearch{
+    width: 450px;
+    height: 40px;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 8px;
+    border: 2px solid rgb(170, 170, 170);
+}
+.button{
+    border: none;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: outline-color 0.3s;
+    outline: 2px solid white;
+}
+.button:hover{
+    outline-color: deepskyblue;
+    
+}

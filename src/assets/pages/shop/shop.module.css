@@ -1,0 +1,20 @@
+.mainContainer{
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+}
+.App{
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.cards{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+}
