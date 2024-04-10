@@ -12,7 +12,7 @@ export function Shop() {
     const sortedFlowers = useMemo(() => {
         if (sortBy === 'Price') {
             return useFlowersStore.getState().sortByPrice()
-        } else if(sortBy === 'Rating') {
+        } else if(sortBy === 'Rate') {
             return useFlowersStore.getState().sortByRating()
         } else if(sortBy === 'Name') {
             return useFlowersStore.getState().sortByName()
