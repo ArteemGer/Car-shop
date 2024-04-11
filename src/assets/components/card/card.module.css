@@ -16,12 +16,18 @@
     font-size: 20px;
 }
 .addButton{
+    cursor:pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     border: none;
     background-color: white;
     font-size: 18px;
+    padding: 5px;
+}
+.addButton:active{
+    outline: 2px solid deepskyblue;
+    border-radius: 8px;
 }
 .addButton img{
     width: 25px;

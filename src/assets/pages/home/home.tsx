@@ -22,9 +22,8 @@ export function Home() {
                 <div className={styles.cards}>
                     {bestFlowers.map((flower) => (
                         <Card 
-                            name = {flower.name}
-                            price = {flower.price}
-                            image = {flower.image}
+                            key={flower.id}
+                            flower={flower}
                         />
                     ))}
                 </div>

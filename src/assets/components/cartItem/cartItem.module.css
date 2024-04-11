@@ -1,0 +1,60 @@
+.card{
+    display: flex;
+    margin-top: 20px;
+}
+.info{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+.firstInfo{
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+}
+.secondInfo{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+.price{
+    font-size: 18px;
+    color: gray;
+}
+.moreInfo{
+    display: flex;
+    justify-content: space-between;
+}
+.addAndRemove{
+    margin-top: 10px;
+    border: 2px solid deepskyblue;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    gap: 5px;
+}
+.del{
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+.btn{
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    color: deepskyblue;
+    font-size: 20px;
+}
+.total{
+    font-size: 20px;
+    color: black;
+}

@@ -1,4 +1,5 @@
 import styles from '../user/user.module.css'
+import { NavLink } from 'react-router-dom'
 
 export function User(){
     return (
@@ -7,9 +8,9 @@ export function User(){
                 <a href="/">
                     <img src="/user.png" alt="" />
                 </a>
-                <a href="/">
+                <NavLink to='/cart'>
                     <img src="/cart.png" alt="" />
-                </a> 
+                </NavLink>
             </div>   
         </>
     )

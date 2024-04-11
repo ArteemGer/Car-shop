@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom'
 import styles from '../menu/menu.module.css'
 
 export function Menu(){
@@ -5,10 +6,10 @@ export function Menu(){
         <>
             <nav className={styles.nav}>
                 <div className={styles.navItem}>
-                    <a className={styles.navLink} href="/">Home</a>
+                    <NavLink to={'/'}>Home</NavLink>
                 </div>
                 <div className={styles.navItem}>
-                    <a className={styles.navLink} href="/shop">Shop</a>
+                    <NavLink to={'/Shop'}>Shop</NavLink>
                 </div>
             </nav> 
         </>

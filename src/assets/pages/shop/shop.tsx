@@ -4,6 +4,8 @@ import { Card } from '../../components/card/card'
 import { Tools } from '../../components/tools/tools'
 import { useMemo, useState } from 'react'
 
+
+
 export function Shop() {
 
     const allFlowers = useFlowersStore(state => state.flowers)
@@ -21,6 +23,7 @@ export function Shop() {
         }
     }, [sortBy])
 
+
     return(
         <>
             <div className={styles.mainContainer}>
@@ -31,9 +34,8 @@ export function Shop() {
                     <div className={styles.cards}>
                         {sortedFlowers.map((flower) => (
                             <Card 
-                                name = {flower.name}
-                                price = {flower.price}
-                                image = {flower.image}
+                                key={flower.id}
+                                flower = {flower}
                             />
                         ))}
                     </div>
