@@ -9,6 +9,7 @@ import { useMemo, useState } from 'react'
 export function Shop() {
 
     const [searchQuery, setSearchQuery] = useState('');
+    const [reverse, setReverse] = useState(false);
 
     const handleSearch = (query: string) => {
         setSearchQuery(query);
@@ -32,17 +33,20 @@ export function Shop() {
     const filteredFlowers = useMemo(() => {
         let result = sortedFlowers;
         if (searchQuery) {
-            result = useFlowersStore.getState().search(searchQuery);
+          result = useFlowersStore.getState().search(searchQuery);
+        }
+        if (reverse) {
+          result = result.reverse();
         }
         return result;
-    }, [sortedFlowers, searchQuery]);
+      }, [sortedFlowers, searchQuery, reverse]);
 
     return (
         <>
             <div className={styles.mainContainer}>
                 <div className={styles.App}>
                     <div className={styles.tools}>
-                        <Tools onCategoryChange={setSortBy} onSearchQueryChange={handleSearch} />
+                        <Tools onCategoryChange={setSortBy} onSearchQueryChange={handleSearch} onReverseChange={setReverse} reverse={reverse}/>
                     </div>
                     <div className={styles.cards}>
                         {filteredFlowers.map((flower) => (

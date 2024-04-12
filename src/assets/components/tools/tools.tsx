@@ -4,10 +4,13 @@ import React, { useState } from 'react';
 interface ToolsProps {
     onCategoryChange: (category: string) => void
     onSearchQueryChange: (category: string) => void
+    onReverseChange: (reverse: boolean) => void
+    reverse: boolean
 }
 export function Tools(props: ToolsProps) {
     const [showOptions, setShowOptions] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
+
 
     const toggleOptions = () =>{
         setShowOptions(!showOptions)
@@ -25,6 +28,10 @@ export function Tools(props: ToolsProps) {
     const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSearchQuery(event.target.value)
         props.onSearchQueryChange(event.target.value)
+    }
+
+    const handleReverse = () => {
+        props.onReverseChange(!props.reverse)
     }
 
     
@@ -53,7 +60,7 @@ export function Tools(props: ToolsProps) {
                     <input className={styles.inputSearch} type="text" placeholder='Search...' onChange={handleSearchChange}/>
                 </div>
                 <div className="revers">
-                    <button className={styles.button}><img src="/reverse.png" alt="" />Reverse</button>
+                    <button className={styles.button} onClick={handleReverse}><img src="/reverse.png" alt="" />{props.reverse ? "Normal" : "Reverse"}</button>
                 </div>
             </div>        
         </>
