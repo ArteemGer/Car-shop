@@ -3,9 +3,11 @@ import React, { useState } from 'react';
 
 interface ToolsProps {
     onCategoryChange: (category: string) => void
+    onSearchQueryChange: (category: string) => void
 }
 export function Tools(props: ToolsProps) {
     const [showOptions, setShowOptions] = useState(false);
+    const [searchQuery, setSearchQuery] = useState('');
 
     const toggleOptions = () =>{
         setShowOptions(!showOptions)
@@ -18,6 +20,11 @@ export function Tools(props: ToolsProps) {
     const handleRadioChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const category = event.target.value
         props.onCategoryChange(category)
+    }
+
+    const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setSearchQuery(event.target.value)
+        props.onSearchQueryChange(event.target.value)
     }
 
     
@@ -43,7 +50,7 @@ export function Tools(props: ToolsProps) {
                         </div>
                 </div>
                 <div className="search">
-                    <input className={styles.inputSearch} type="text" placeholder='Search...'/>
+                    <input className={styles.inputSearch} type="text" placeholder='Search...' onChange={handleSearchChange}/>
                 </div>
                 <div className="revers">
                     <button className={styles.button}><img src="/reverse.png" alt="" />Reverse</button>

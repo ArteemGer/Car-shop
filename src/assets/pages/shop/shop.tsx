@@ -8,34 +8,47 @@ import { useMemo, useState } from 'react'
 
 export function Shop() {
 
-    const allFlowers = useFlowersStore(state => state.flowers)
-    const [sortBy, setSortBy] = useState('Name')
+    const [searchQuery, setSearchQuery] = useState('');
+
+    const handleSearch = (query: string) => {
+        setSearchQuery(query);
+    }
+
+    const allFlowers = useFlowersStore(state => state.flowers);
+    const [sortBy, setSortBy] = useState('Name');
 
     const sortedFlowers = useMemo(() => {
         if (sortBy === 'Price') {
-            return useFlowersStore.getState().sortByPrice()
-        } else if(sortBy === 'Rate') {
-            return useFlowersStore.getState().sortByRating()
-        } else if(sortBy === 'Name') {
-            return useFlowersStore.getState().sortByName()
+            return useFlowersStore.getState().sortByPrice();
+        } else if (sortBy === 'Rate') {
+            return useFlowersStore.getState().sortByRating();
+        } else if (sortBy === 'Name') {
+            return useFlowersStore.getState().sortByName();
         } else {
-            return allFlowers
+            return allFlowers;
         }
-    }, [sortBy])
+    }, [sortBy, allFlowers]);
 
+    const filteredFlowers = useMemo(() => {
+        let result = sortedFlowers;
+        if (searchQuery) {
+            result = useFlowersStore.getState().search(searchQuery);
+        }
+        return result;
+    }, [sortedFlowers, searchQuery]);
 
-    return(
+    return (
         <>
             <div className={styles.mainContainer}>
                 <div className={styles.App}>
                     <div className={styles.tools}>
-                        <Tools onCategoryChange={setSortBy} />
+                        <Tools onCategoryChange={setSortBy} onSearchQueryChange={handleSearch} />
                     </div>
                     <div className={styles.cards}>
-                        {sortedFlowers.map((flower) => (
-                            <Card 
+                        {filteredFlowers.map((flower) => (
+                            <Card
                                 key={flower.id}
-                                flower = {flower}
+                                flower={flower}
                             />
                         ))}
                     </div>

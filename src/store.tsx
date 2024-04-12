@@ -17,6 +17,7 @@ interface FlowersState {
     sortByPrice: () => Flower[];
     sortByRating: () => Flower[];
     sortByName: () => Flower[];
+    search: (query: string) => Flower[];
 }
 
 interface CartItem {
@@ -67,6 +68,14 @@ export const useFlowersStore = create<FlowersState>()((set) => ({
     sortByName: () => {
         const sortedFlowers: Flower[] = [...useFlowersStore.getState().flowers].sort((a,b) => a.name.localeCompare(b.name));
         return sortedFlowers;
+    },
+    search: (query: string): Flower[] => {
+        if (!query) {
+            return useFlowersStore.getState().flowers;
+        }
+        return useFlowersStore.getState().flowers.filter((flower: Flower) =>
+            flower.name.toLowerCase().includes(query.toLowerCase())
+        );
     },
 
 }));
