@@ -1,4 +1,4 @@
-import { Flower, useCartStore } from '../../../store';
+import { Flower, useCartStore } from '../../store';
 import styles from '../card/card.module.css'
 
 interface Props {
@@ -13,10 +13,10 @@ export function Card({ flower }: Props) {
                 <h2>{flower.name}</h2>
                 <div className={styles.price}>
                     <p>{flower.price}$</p>
-                    <button className={styles.addButton} onClick={() => useCartStore.getState().addToCart(flower)}>
+                    <a className={styles.addButton} onClick={() => useCartStore.getState().addToCart(flower)}>
                         <img src="/cart.png" alt="" />
                         Add to cart
-                    </button>
+                    </a>
                 </div>
             </div>
         </>

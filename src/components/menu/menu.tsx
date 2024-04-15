@@ -11,7 +11,7 @@ export function Menu(){
                 <div className={styles.navItem}>
                     <NavLink to={'/Shop'}>Shop</NavLink>
                 </div>
-            </nav> 
+            </nav>
         </>
     )
 }

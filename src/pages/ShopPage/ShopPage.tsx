@@ -1,5 +1,5 @@
-import styles from '../shop/shop.module.css'
-import { useFlowersStore } from '../../../store'
+import styles from '../ShopPage/ShopPage.module.css'
+import { useFlowersStore } from '../../store'
 import { Card } from '../../components/card/card'
 import { Tools } from '../../components/tools/tools'
 import { useMemo, useState } from 'react'

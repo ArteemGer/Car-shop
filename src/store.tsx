@@ -37,7 +37,7 @@ interface CartState {
 
 
 
-export const useFlowersStore = create<FlowersState>()((set) => ({
+export const useFlowersStore = create<FlowersState>()(() => ({
     flowers: [
         { id: 1, name: 'flower 1', price: 10, description: 'lorem', image: '/flower1.png', rating: 5, },
         { id: 2, name: 'AAAAAAA', price: 11, description: 'lorem', image: '/flower2.png', rating: 4, },

@@ -1,6 +1,6 @@
-import { useCartStore } from '../../../store'
+import { useCartStore } from '../../store'
 import { CartItem } from '../../components/cartItem/cartItem'
-import styles from './cart.module.css'
+import styles from './CartPage.module.css'
 
 export function Cart() {
 

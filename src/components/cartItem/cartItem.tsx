@@ -1,4 +1,4 @@
-import { Flower, useCartStore } from '../../../store'
+import { Flower, useCartStore } from '../../store'
 import styles from './cartItem.module.css'
 
 

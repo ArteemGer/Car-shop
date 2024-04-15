@@ -1,8 +1,8 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Layout from './assets/components/layout/layout';
-import { Home } from './assets/pages/home/home';
-import { Shop } from './assets/pages/shop/shop';
-import { Cart } from './assets/pages/cart/cart';
+import Layout from './components/layout/layout';
+import { Home } from './pages/HomePage/HomePage';
+import { Shop } from './pages/ShopPage/ShopPage';
+import { Cart } from './pages/CartPage/CartPage';
 import './App.css'
 
 const router = createBrowserRouter([

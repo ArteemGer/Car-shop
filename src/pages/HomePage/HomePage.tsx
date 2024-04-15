@@ -3,8 +3,8 @@ import { Photos } from '../../components/photos/photos'
 import { Between } from '../../components/between/between'
 import { Review } from '../../components/review/review'
 import { Card } from '../../components/card/card'
-import styles from './home.module.css'
-import { useFlowersStore } from '../../../store'
+import styles from './HomePage.module.css'
+import { useFlowersStore } from '../../store'
 
 
 export function Home() {
