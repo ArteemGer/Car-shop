@@ -9,7 +9,6 @@ interface ToolsProps {
 }
 export function Tools(props: ToolsProps) {
     const [showOptions, setShowOptions] = useState(false);
-    const [searchQuery, setSearchQuery] = useState('');
 
 
     const toggleOptions = () =>{
@@ -26,7 +25,6 @@ export function Tools(props: ToolsProps) {
     }
 
     const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setSearchQuery(event.target.value)
         props.onSearchQueryChange(event.target.value)
     }
 

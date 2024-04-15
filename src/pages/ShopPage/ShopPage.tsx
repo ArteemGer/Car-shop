@@ -1,12 +1,12 @@
 import styles from '../ShopPage/ShopPage.module.css'
-import { useFlowersStore } from '../../store'
+import { useFlowersStore } from '../../stores/FlowerStore'
 import { Card } from '../../components/card/card'
 import { Tools } from '../../components/tools/tools'
 import { useMemo, useState } from 'react'
 
 
 
-export function Shop() {
+export function ShopPage() {
 
     const [searchQuery, setSearchQuery] = useState('');
     const [reverse, setReverse] = useState(false);

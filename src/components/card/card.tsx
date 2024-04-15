@@ -1,4 +1,5 @@
-import { Flower, useCartStore } from '../../store';
+import { useCartStore } from '../../stores/CartStore';
+import { Flower } from '../../stores/FlowerStore';
 import styles from '../card/card.module.css'
 
 interface Props {

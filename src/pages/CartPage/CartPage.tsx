@@ -1,12 +1,12 @@
-import { useCartStore } from '../../store'
+import { useCartStore } from '../../stores/CartStore'
 import { CartItem } from '../../components/cartItem/cartItem'
 import styles from './CartPage.module.css'
 
-export function Cart() {
+export function CartPage() {
 
     const cartItems = useCartStore(state => state.getCartItems())
     const hasItems = cartItems.length > 0
-    const totalPrice = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+    const totalPrice = cartItems.reduce((acc, item) => acc + item.flower.price * item.quantity, 0);
     
     return (
         <>
@@ -20,7 +20,7 @@ export function Cart() {
                             <div className={styles.items}>
                                 <div className={styles.cartItems}>
                                     {cartItems.map(item => (
-                                        <CartItem key={item.id} flower={item} quantity={item.quantity}/>
+                                        <CartItem key={item.flower.id} flower={item.flower} quantity={item.quantity}/>
                                     ))}
                                 </div>
                                 <div className={styles.fullPrice}>

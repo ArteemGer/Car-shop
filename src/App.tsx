@@ -1,8 +1,8 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from './components/layout/layout';
-import { Home } from './pages/HomePage/HomePage';
-import { Shop } from './pages/ShopPage/ShopPage';
-import { Cart } from './pages/CartPage/CartPage';
+import { HomePage } from './pages/HomePage/HomePage';
+import { ShopPage } from './pages/ShopPage/ShopPage';
+import { CartPage } from './pages/CartPage/CartPage';
 import './App.css'
 
 const router = createBrowserRouter([
@@ -10,7 +10,7 @@ const router = createBrowserRouter([
     path: '/',
     element: (
       <Layout>
-        <Home />
+        <HomePage />
       </Layout>
     ),
   },
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
     path: '/shop',
     element: (
       <Layout>
-        <Shop />
+        <ShopPage />
       </Layout>
     ),
   },
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
     path: '/cart',
     element: (
       <Layout>
-        <Cart />
+        <CartPage />
       </Layout>
     ),
   },

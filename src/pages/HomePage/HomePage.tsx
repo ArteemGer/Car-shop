@@ -4,10 +4,10 @@ import { Between } from '../../components/between/between'
 import { Review } from '../../components/review/review'
 import { Card } from '../../components/card/card'
 import styles from './HomePage.module.css'
-import { useFlowersStore } from '../../store'
+import { useFlowersStore } from '../../stores/FlowerStore'
 
 
-export function Home() {
+export function HomePage() {
 
     const bestFlowers = useFlowersStore(state => state.bestSales())
 
