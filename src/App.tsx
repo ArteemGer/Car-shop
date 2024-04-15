@@ -3,7 +3,9 @@ import Layout from './components/layout/layout';
 import { HomePage } from './pages/HomePage/HomePage';
 import { ShopPage } from './pages/ShopPage/ShopPage';
 import { CartPage } from './pages/CartPage/CartPage';
+import { CarPage } from './pages/CarPage/CarPage';
 import './App.css'
+
 
 const router = createBrowserRouter([
   {
@@ -30,14 +32,14 @@ const router = createBrowserRouter([
       </Layout>
     ),
   },
-  // {
-  //   path: `/shop/flower/:id`,
-  //   element: (
-  //     <Layout>
-  //       <Flower />
-  //     </Layout>
-  //   ),
-  // },
+  {
+    path: `/shop/car/:id`,
+    element: (
+      <Layout>
+        <CarPage />
+      </Layout>
+    ),
+  },
 ]);
 
 const App: React.FC = () => {

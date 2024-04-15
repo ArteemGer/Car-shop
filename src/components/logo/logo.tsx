@@ -4,7 +4,7 @@ export function Logo(){
     return (
         <>
             <div className="icon">
-            <a className={styles.iconLink} href="/"><span className={styles.mainWord}>Flower</span>Shop</a>
+                <a className={styles.iconLink} href="/"><span className={styles.mainWord}>Car</span>Shop</a>
             </div>
         </>
     )

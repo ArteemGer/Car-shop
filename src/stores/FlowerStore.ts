@@ -22,15 +22,12 @@ interface FlowersState {
 
 export const useFlowersStore = create<FlowersState>()(() => ({
     flowers: [
-        { id: 1, name: 'flower 1', price: 10, description: 'lorem', image: '/flower1.png', rating: 5, },
-        { id: 2, name: 'AAAAAAA', price: 11, description: 'lorem', image: '/flower2.png', rating: 4, },
-        { id: 3, name: 'flower 3', price: 12, description: 'lorem', image: '/flower3.png', rating: 5, },
-        { id: 4, name: 'flower 4', price: 13, description: 'lorem', image: '/flower4.png', rating: 5, },
-        { id: 5, name: 'BBBBBBBBB', price: 14, description: 'lorem', image: '/flower5.png', rating: 5, },
-        { id: 6, name: 'flower 6', price: 15, description: 'lorem', image: '/flower6.png', rating: 3, },
-        { id: 7, name: 'flower 7', price: 16, description: 'lorem', image: '/flower1.png', rating: 5, },
-        { id: 8, name: 'CCCCCCC', price: 17, description: 'lorem', image: '/flower2.png', rating: 5, },
-        { id: 9, name: 'flower 9', price: 18, description: 'lorem', image: '/flower3.png', rating: 3, },
+        { id: 1, name: 'BMW X5', price: 10000, description: 'lorem', image: '/BMW X5.svg', rating: 5, },
+        { id: 2, name: 'Toyota RAF 4', price: 10000, description: 'lorem', image: '/Toyota RAF 4.svg', rating: 5, },
+        { id: 3, name: 'Lamborghini Urus', price: 10000, description: 'lorem', image: '/Lamborghini Urus.svg', rating: 4, },
+        { id: 4, name: 'Hyundai Genesis G80', price: 10000, description: 'lorem', image: '/Hyundai Genesis G80.svg', rating: 5, },
+        { id: 5, name: 'Porsche cayman', price: 10000, description: 'lorem', image: '/Porsche cayman.svg', rating: 5, },
+        { id: 6, name: 'Audi q7', price: 10000, description: 'lorem', image: '/Audi q7.svg', rating: 5, },
     ],
 
     loading: false,
@@ -38,7 +35,7 @@ export const useFlowersStore = create<FlowersState>()(() => ({
 
     bestSales: () => {
         const sortedFlowers: Flower[] = [...useFlowersStore.getState().flowers].sort((a, b) => b.rating - a.rating);
-        return sortedFlowers.slice(0,4);
+        return sortedFlowers.slice(0,3);
     },
     sortByPrice: () => {
         const sortedFlowers: Flower[] = [...useFlowersStore.getState().flowers].sort((a,b) => b.price - a.price);
