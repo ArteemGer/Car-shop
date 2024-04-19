@@ -1,4 +1,4 @@
-import { useCartStore } from '../../stores/CartStore';
+import { NavLink } from 'react-router-dom';
 import { Flower } from '../../stores/FlowerStore';
 import styles from '../card/card.module.css'
 
@@ -8,7 +8,7 @@ interface Props {
 
 export function Card({ flower }: Props) {
     return (
-        <>
+        <NavLink to={`/car?=${flower.name}`}>
             <div className={styles.card}>
                 <img src={flower.image} alt={flower.name} />
                 <h2>{flower.name}</h2>
@@ -16,6 +16,6 @@ export function Card({ flower }: Props) {
                     <p>{flower.price}$</p>
                 </div>
             </div>
-        </>
+        </NavLink>
     )
 }

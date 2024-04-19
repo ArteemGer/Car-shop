@@ -1,0 +1,47 @@
+.container{
+    display: flex;
+    justify-content: center;
+    background-color: aliceblue;
+}
+.car{
+    width: 1200px;
+    margin-top: 50px;
+}
+.btnBack{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 40px;
+    font-size: 20px;
+    background-color: deepskyblue;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+.btnBack:hover{
+    background-color: white;
+    outline: 1px deepskyblue solid;
+    color: deepskyblue;
+}
+.carInfo{
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    border-radius: 8px;
+    display: flex;
+}
+.image{
+    width: 300px;
+    border-radius: 8px;
+}
+.carText{
+    padding-left: 50px;
+}
+.feature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+}
