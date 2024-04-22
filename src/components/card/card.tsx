@@ -8,7 +8,7 @@ interface Props {
 
 export function Card({ flower }: Props) {
     return (
-        <NavLink to={`/car?=${flower.name}`}>
+        <NavLink to={`/car/${flower.id}`}>
             <div className={styles.card}>
                 <img src={flower.image} alt={flower.name} />
                 <h2>{flower.name}</h2>
